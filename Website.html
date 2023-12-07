@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <script>
+        // Your JavaScript code goes here
+        function toggleSidebar() {
+          var sidebar = document.querySelector('.side');
+          sidebar.style.display = (sidebar.style.display === 'none' || sidebar.style.display === '') ? 'block' : 'none';
+        }
+      </script>
+<title>Page Title</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+* {
+  box-sizing: border-box;
+}
+
+/* Style the body */
+body {
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif
+  margin: 0;
+}
+
+/* Header/logo Title */
+.header {
+  padding: 80px;
+  text-align: center;
+  background: #1a66bc;
+  color: white;
+}
+
+/* Increase the font size of the heading */
+.header h1 {
+  font-size: 40px;
+}
+
+/* Style the top navigation bar */
+.navbar {
+  overflow: hidden;
+  background-color: #333;
+}
+
+/* Style the navigation bar links */
+.navbar a {
+  float: left;
+  display: block;
+  color: white;
+  text-align: center;
+  padding: 14px 20px;
+  text-decoration: none;
+}
+
+/* Right-aligned link */
+.navbar a.right {
+  float: right;
+}
+
+/* Change color on hover */
+.navbar a:hover {
+  background-color: #ddd;
+  color: black;
+}
+
+/* Column container */
+.row {  
+  display: -ms-flexbox; /* IE10 */
+  display: flex;
+  -ms-flex-wrap: wrap; /* IE10 */
+  flex-wrap: wrap;
+}
+
+/* Create two unequal columns that sits next to each other */
+/* Sidebar/left column */
+.side {
+  -ms-flex: 30%; /* IE10 */
+  flex: 30%;
+  background-color: #f1f1f1;
+  padding: 20px;
+}
+
+/* Main column */
+.main {   
+  -ms-flex: 70%; /* IE10 */
+  flex: 70%;
+  background-color: white;
+  padding: 20px;
+}
+
+/* Style the main column */
+.main {
+  flex: 70%; /* Set the main column width */
+  max-width: 100%; /* Ensure the main column scales with the box in the layout */
+  box-sizing: border-box; /* Include padding and border in the element's total width and height */
+}
+
+/* Fake image, just for this example */
+.fakeimg {
+  background-color: #aaa;
+  width: 100%;
+  padding: 20px;
+}
+
+/* Footer */
+.footer {
+  padding: 20px;
+  text-align: center;
+  background: #ddd;
+}
+
+/* Responsive layout - when the screen is less than 700px wide, make the two columns stack on top of each other instead of next to each other */
+@media screen and (max-width: 700px) {
+  .row {   
+    flex-direction: column;
+  }
+}
+
+/* Responsive layout - when the screen is less than 400px wide, make the navigation links stack on top of each other instead of next to each other */
+@media screen and (max-width: 400px) {
+  .navbar a {
+    float: none;
+    width: 100%;
+  }
+}
+</style>
+</head>
+<body>
+
+<div class="header">
+  <h1>[My Podcast - FCT0329]</h1>
+  <p>Welcome to my world.</p>
+</div>
+
+<div class="navbar">
+  <a href="about.html">About the Podcast</a>
+  <a href="episodes.html">Episodes</a>
+  <a href="transcripts.html">Transcripts</a>
+  <a href="Website.html">Home</a>
+  <a href="#" class="right">Phạm Bùi Hoàng Linh</a>
+</div>
+
+<button class="collapseBtn" onclick="toggleSidebar()">Toggle Sidebar</button>
+
+<div class="row">
+  <div class="side">
+    <h2>About Me</h2>
+    <h5>Photo of me:</h5>
+    <div class="fakeimg" style="height:200px;">Image</div>
+    <p>Some text about me in culpa qui officia deserunt mollit anim..</p>
+    <h3>Podcasts</h3>
+    <p>Sorted from oldest to newest.</p>
+    <div class="fakeimg" style="height:60px;">[Lớp 9 và những căng thẳng của một học sinh cuối cấp 2]</div><br>
+    <div class="fakeimg" style="height:60px;">Podcast 2</div><br>
+    <div class="fakeimg" style="height:60px;">Podcast</div>
+  </div>
+  <div class="main">
+    <h2>[Lớp 9 và những căng thẳng của một học sinh cuối cấp 2]</h2>
+    <h5>Title description, Dec 7, 2017</h5>
+    <div class="fakeimg" style="max-width: 70%; max-height: 50%;"><img src="https://storage.googleapis.com/pai-images/1abebf1bd4f0450c9dbd9d6e44fb929b.jpeg" width="100%" height="auto" alt="Description of Image 1"></div>
+    <p>Some text..</p>
+    <p>Lời nói mở đầu: <br> <br>
+      Đây là bài viết của một cậu học sinh hay overthink và có lẽ là hay làm quá chuyện lên. Khá khác người, nhưng đủ thông minh để hiểu cái gì đang diễn ra. Bài này chỉ là quan điểm của cá nhân tôi, vì vậy, những người khác đọc bài viết này cũng có thể sẽ thấy vài đoạn nghe không thuận tai lắm, rằng lúc đó mọi người sẽ làm điều gì đó khác, có thể tốt hơn so với tôi đã từng làm. <br> <br>
+      Vậy giờ, ta sẽ bắt đầu nói về tôi của năm lớp chín này.</p>
+    <div class="fakeimg" style="max-width: 100%; max-height: 50%;"><img src="https://lh7-us.googleusercontent.com/kt7ScBD7028CTzZ17ZGrotvgQd-Eg3VFHCSGw5IDcTsxIyjxKNfPEC_21Tnqn43Lxcoyf5l7kJvGTpJzX4hVuTNLX56TNDS1XsWpUar22n9a2IzEajSdff5JiTntGlUFDSjEaqKcwpIfiKYeIU69MdU" width="100%", height="auto" alt="Description of Image 1"></div>
+    <p>Đã hai tuần trôi qua kể từ khi tôi bắt đầu thấy một cái sự buồn chán không thể tả được, dù tôi đã tả nó bằng một cách kỳ diệu nào đó. Và cũng nhờ vào cái sự kỳ diệu ấy mà tôi chán vẫn hoàn chán.
+      Như ông bà tổ tiên tôi vẫn hay nói, học phải đi đôi với hành, vì là học sinh mà? Phần học đã xong, giờ tới lượt tôi bị hành. Nói ngắn gọn thì tôi phải ôn thi, và chỉ khi tôi nhìn vào cuốn lịch treo trên tường nhà tôi, tôi mới giật mình thấy thời gian đã trôi qua nhanh như vậy rồi. Mới thoáng chốc mà đã hai tuần, nguyên hai tuần đấy?! Là mười bốn ngày tôi không làm được cái gì có ích cho xã hội cả. Một cái chu kỳ từ việc sáng sớm ngủ dậy xách cặp tới trường, giở sách vở ra ghi chép như một học sinh thực thụ, nghỉ trưa, lại ghi chép thêm một chút nữa, rồi tôi lại đi về, cùng lắm thì vài hôm có một buổi học thêm. Dù gì cũng chỉ để cho tốt cho tôi, nên tôi thấy việc học thêm không có vấn đề gì lắm. Nhưng ở trường, tôi cũng chả biết gì ngoài giở bài vở ra lắm. Tôi làm vậy vì hai điều: Vì tôi lúc đó đang không có gì để làm lắm (ít ra là ngoài chuyện bài vở ra), và để nghe ngóng động tĩnh trong lớp. Nói văn chương vậy chứ nói thô ra thì não tôi nửa thì muốn ôn bài, nửa còn lại cứ muốn hóng chuyện mà thôi. Có lẽ tôi làm vậy quá thường xuyên nên khi tôi lết ra khỏi lớp để tìm người nói chuyện, thì đó lại chính là cái chủ đề duy nhất mà tôi có thể nghĩ tới. Một câu chuyện bình thường với tôi trong tuần này nó cũng sẽ hay kiểu này: <br>
+      -“Ồ hế lô, thi thế nào rồi? Đề mấy vậy?” <br>
+      -“Cũng... tàm tạm? T đề 3.” <br>
+      -“Ô hay t cũng đề 3 này. Mà t ôn cho môn tiếp theo rồi đấy, m cũng nên ôn đi” <br>
+      -“Ờ, ờ... thế chào nhá, giờ t có chút việc” (Vẫy tay chào tôi) (Tôi chào lại) <br>
+      Và tôi đứng hình đó được một lúc rồi lại quay vào lớp rồi nằm gục xuống mặt bàn. Ngẫm lại cuộc trò chuyện vừa rồi, tôi thấy mình có khả năng bắt chuyện với, có lẽ là bất kỳ ai. Chỉ cần là một người đang lắng nghe tôi nói thôi là được, quen hay không cũng không quan trọng lắm. Vấn đề duy nhất của tôi là tôi vẫn chưa cải thiện được cái khả năng tạo chủ đề mới (cho đỡ bị đọng lại trên một cái chủ đề mà gần như không ai khác ngoài tôi muốn thảo luận về) và định hướng cuộc trò chuyện của mình. Ngay cả việc khi tôi nhắn với mọi người trên mạng, câu chuyện vẫn cứ như vậy mà tiếp diễn. Cho dù là có bao nhiêu thời gian để trau chuốt từng câu chữ của mình đi chăng nữa, thế nào tôi cũng vẫn quay lại chủ đề cũ, nên tôi đâm nản luôn. Mà, tuần thi cử quan trọng thế này chắc mọi người cũng đều đi ôn thi hết rồi nên tôi chắc cũng không nên làm phiền họ quá nhiều nữa. <br> <br>
+      Những hôm không có người để nói chuyện cùng, tôi lại “vô tình” có một đêm thức trắng. Không ngủ được, tôi lại bật đèn, đọc sách và nghĩ ngợi lung tung. Từ chuyện trong ngày, cho tới chuyện sâu trong quá khứ, đôi lúc lại lôi một tờ giấy ra và viết lại một bản phân tích cho bản thân mình, chẳng khác nào tự làm bác sĩ tâm lý cho chính mình cả. Tôi nghĩ, rồi lại nghĩ, cứ chìm trong cái mớ suy nghĩ hỗn độn của tôi cho tới khi có người tới gank tôi.</p>
+      <div class="fakeimg" style="max-width: 50%; max-height: 50%;"><img src="https://lh7-us.googleusercontent.com/rTR9gAMuh9r5Qrdb6yfZYU6oZSed7Osb8qQ_iVFq3zHdcCvknhijmrkGOp6-7TpTn0Vi-GRsfVbrZGx37arBq8bkTiuMPZTwRHtTyogZLtYa8cD2tweEj_H8YCXJnxCcmbxyJy10eb4uQz5OcTsVrqQ" width="100%", height="auto" alt="Description of Image 1"></div>
+    <p>"Mỗi ngày đi học là một ngày vui". Chí ít, đó chỉ còn là những khẩu hiệu tôi còn được nghe từ thời tiểu học. Hình như tôi hơi bi quan, nhưng năm lớp chín của tôi là như vậy. Mọi học sinh đều đi đến trường, nhỉ? Vậy, bạn thấy trường bạn như thế nào? Bình thường. Điểm số thế nào? Cũng ổn, còn không thì tạm tạm. Nhưng mọi người đến trường làm được gì, nói chuyện được với ai không? Đó không phải câu trả lời mọi người có thể đáp lại ngay lập tức. Ngẫm lại câu hỏi này, tôi mới thấy mình cô đơn làm sao. Ở lớp, tôi chỉ như một người ngoài vậy. Nếu là so với trước kia, khi tiếng nói của tôi vẫn còn trọng lượng thì lần này có khi nó tệ hơn nhiều, hơn so với tôi nghĩ. Nói theo một cách khác, tôi dường như bị cách ly ở trong cái lớp đó. Nếu tôi phải nói rằng tôi luôn bị chọn cuối khi đang phải chia đội/nhóm chắc cũng đủ hiểu tôi bị thế nào rồi. Có lẽ, và chỉ có lẽ, lớp tôi không ưa tôi đến cái độ mà còn phải chơi kéo búa lá (hay oẳn tù xì) để quyết xem nhóm nào sẽ, trích nguyên văn, phải có tôi trong nhóm của họ. Tất nhiên là tôi làm độc lập được, tôi không có vấn đề gì với điều đó, nhưng vì đó là hoạt động nhóm, mà còn là nhóm tự chọn nữa, nên bọn họ chắc phải bất đắc dĩ lắm mới chấp nhận việc tôi ở trong nhóm họ được. Ở những nơi khác, nó có như vậy đâu? Tôi tưởng một lớp, một tập thể là phải đoàn kết? Phải giúp đỡ, cùng nhau sánh bước được mới có thể gọi là một tập thể chân chính chứ? Nó đã không còn là một tập thể lớp nữa. Cái từ "tập thể" cũng chỉ là cái vỏ bọc cho gần như mọi lớp mà thôi. Nói thô ra thì nó cũng chỉ là câu chuyện về bè phái và người bị thừa ra mà thôi. <br> <br>
+      Mà nếu tôi cũng được quyết định quay trở lại lớp cũ của tôi thì sao? Không. Đơn giản là không. Nói một cách dễ hiểu thì, nếu bây giờ tôi có quay lại với những bạn bè lớp cũ của tôi, tôi cũng không nghĩ họ sẽ đón nhận điều này một cách dễ dàng. Từ khi tách lớp, từng người trong lớp tôi đều đã dạt về một nơi nào đó hoàn toàn xa lạ. Nhưng chính cái sự xa lạ đó làm họ cảm thấy gắn bó ở đó hơn so với lớp cũ. Và cũng vì lý do đó, khi họ chuyển sang lớp mới, trừ những người mà họ thực sự thân ra, những người bạn cũ, trong trường hợp này thì là tôi, dường như mờ đi trong ký ức họ. Thứ duy nhất họ còn nhớ về tôi là về cái tên của tôi mà thôi. Nhiều lần lướt qua hành lang, tôi hay nhìn thẳng vào mặt họ để xem lại những suy nghĩ của mình. Phần lớn họ đều sẽ ngoảnh đi nơi khác. Có lẽ họ không để ý tôi do đang mất tập trung? Lần khác, tôi cũng làm vậy, nhưng lần này, tôi vẫy tay chào họ. Họ bước qua như thể tôi không ở đó. Hay mình chưa chào to đủ? Lần này mình thử lại xem? Tôi vẫy tay rồi hế lô thật to, goi thẳng tên đứa bạn tôi. Bạn tôi quay đi nơi khác. Bạn của bạn tôi hỏi mấy câu đại loại kiểu “Bạn m à?”, “Ủa m quen nó à?”. Bạn tôi cười trừ. Dù không phải ai cũng vậy nhưng mỗi lần vậy, tôi đau trong lòng. Có vẻ như hầu hết mọi người đều tận hưởng việc ở lớp mới hơn việc phải gặp tôi hằng ngày thì phải. Cũng phải thôi? Lớp mới cũng là cơ hội để họ làm lại từ đầu mà? Có lớp mới, họ có thể được biết đến như một người ngầu bá cháy, một idol của lớp thay vì phải ở cái chốn hoang vu này. Họ thích lớp mới hơn, tôi ủng hộ điều đó. Một điều nhỏ nhoi duy nhất mà tôi mong từ họ chỉ là một lời chào với sự tôn trọng tối thiểu cho tôi nếu lần sau chúng tôi lại gặp nhau trên hành lang mà thôi. Nếu có lần sau… <br> <br>
+      Đứng trước tình trạng đó, tôi… hình như đã không làm gì cả. Không biết tự hồi nào tôi đã chấp nhận cái số phận đó. Tôi thấy mình bất lực, nhưng tôi không thấy mình sai khi nghĩ rằng việc hàn gắn với những người như vậy dường như đã trở thành một điều quá xa lạ đối với tôi rồi… với cả họ nữa. <br> <br>
+      Năm sau cũng lớp 10 rồi, mọi người cũng nên kiếm cho mình một người bạn đồng hành đi, vì sau này, những người ta từng coi là bạn học, có lẽ họ sẽ không còn nghĩ vậy đâu. Có khi họ sẽ còn không nhớ ra bạn luôn ấy chứ.
+      Sau cùng, tôi cũng chẳng thể làm gì hơn. Cuộc sống mà? Có lẽ tôi nên dừng suy nghĩ quá nhiều  về mấy chuyện rất đỗi bình thường này. Dù vậy, đó là những điều tôi muốn nói về cái năm học đầy biến cố của tôi. <br> <br>
+      Cảm ơn mọi người đã đọc.      
+      </p>
+    <br>
+    <h2>Author's Comments</h2>
+    <h5>Title description, Nov 17, 2023</h5>
+    <div class="fakeimg" style="height:200px;">Image</div>
+    <p>Some text..</p>
+    <p>Sunt in culpa qui officia deserunt mollit anim id est laborum consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco.</p>
+  </div>
+</div>
+
+<div class="footer">
+  <h2>Footer</h2>
+</div>
+
+</body>
+</html>
+
+<!-- <div class="fakeimg" style="max-width: 100%; max-height: 50%;"><img src="[INSERT IMAGE LINK HERE]" width="100%", height="auto" alt="Description of Image 1"></div> to insert image, width height fakeimg is outline, image for image --> 
